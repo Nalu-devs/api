@@ -1,13 +1,28 @@
-@app.route('/usuarios', methods=['GET'])
-def listar_usuarios():
-    return jsonify(usuarios)
+from flask import Flask, jsonify, request
 
-@app.route('/usuarios', methods=['POST'])
-def criar_usuarios():
+app = Flask(__name__)
+
+alunos = [
+    {"id": 1, "nome": "Ana"},
+    {"id": 2, "nome": "Carlos"},
+    {"id": 3, "nome": "Carol"}
+]
+
+@app.route("/")
+def home():
+    return "API Flask rodando!"
+
+@app.route("/alunos", methods=["GET"])
+def listar_alunos():
+    return jsonify(alunos)
+
+@app.route("/alunos", methods=["POST"])
+def criar_alunos():
     novo = request.json
-    novo ['id'] = len(usuarios) + 1
-    usuarios.append(novo)
+    novo['id'] = len(alunos) + 1
+    alunos.append(novo)
     return jsonify(novo), 201
 
-if name == '__main__':
+
+if __name__ == "__main__":
     app.run(debug=True)

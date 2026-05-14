@@ -1,24 +1,20 @@
 async function buscarUsuarios() {
-
   const resposta = await fetch(
     "https://jsonplaceholder.typicode.com/users"
   );
 
   const usuarios = await resposta.json();
 
-  const lista = document.getElementById(
-    "listaUsuarios"
-  );
-
-  lista.innerHTML = "";
+  const corpo = document.getElementById("corpoTabela");
+  corpo.innerHTML = "";
 
   usuarios.forEach(usuario => {
-    lista.innerHTML += `
-      <li>
-        ${usuario.name}
-        ${usuario.email}
-        ${usuario.zipcode}
-      </li>
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td>${usuario.name}</td>
+      <td>${usuario.email}</td>
+      <td>${usuario.phone}</td>
     `;
+    corpo.appendChild(tr);
   });
 }

@@ -1,13 +1,74 @@
 body {
-  font-family: Arial;
-  padding: 20px;
+  font-family: Arial, sans-serif;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: #f5f5f5;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  color: #222;
+  margin: 0;
 }
 
 button {
-  padding: 10px;
+  background: #4a90d9;
+  color: white;
+  border: none;
+  padding: 12px 32px;
+  font-size: 1rem;
+  border-radius: 8px;
   cursor: pointer;
 }
 
-li {
-  margin: 10px 0;
+button:hover {
+  background: #357abd;
+}
+
+#resultado {
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+th {
+  background: #4a90d9;
+  color: white;
+  padding: 10px 16px;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+td {
+  padding: 10px 16px;
+  border-bottom: 1px solid #eee;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+tbody tr:hover {
+  background: #f0f6ff;
+}
+
+p.instrucao {
+  color: #aaa;
+  font-size: 0.8rem;
+  text-align: center;
+  margin: 0;
 }

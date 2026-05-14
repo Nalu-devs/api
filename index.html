@@ -1,24 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Consumindo api</title>
+  <link rel="stylesheet" href="styles.css">
+  <title>Consumindo API</title>
 </head>
-  
-  <body>
-    <main>
-      <h1>Busque os usuários</h1>
-      <p>
-        Clique no botão para buscar usuários.
-      </p>
-      <button onclick="buscarUsuarios()">
-        Buscar Usuários
-      </button>
-      <ul id="listaUsuarios"></ul>
-      <script src="script.js"></script>
-    </main>  
-  </body>
+<body>
+  <main>
+    <h1>Busque os usuários</h1>
 
+    <button onclick="buscarUsuarios()">
+      Buscar Usuários
+    </button>
+
+    <div id="resultado">
+      <table id="tabelaUsuarios">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Telefone</th>
+          </tr>
+        </thead>
+        <tbody id="corpoTabela"></tbody>
+      </table>
+    </div>
+
+    <p class="instrucao">
+      Clique no botão acima para buscar os usuários da API.
+    </p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
 </html>

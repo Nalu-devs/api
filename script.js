@@ -17,7 +17,7 @@ async function buscarUsuarios() {
       <li>
         ${usuario.name}
         ${usuario.email}
-        ${usuario.address.zipcode}
+        ${usuario.zipcode}
       </li>
     `;
   });

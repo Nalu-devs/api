@@ -1,6 +1,6 @@
 async function buscarUsuarios() {
   const resposta = await fetch(
-    "https://jsonplaceholder.typicode.com/users"
+    "https://api-usuarios-i4ye.onrender.com/usuarios"
   );
 
   const usuarios = await resposta.json();

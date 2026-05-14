@@ -7,12 +7,7 @@ CORS(app)
 
 @app.route("/")
 def inicio():
-
     return "API FUNFO"
-
-app.run(debug=True)
-
-app = Flask(__name__)
 
 usuarios = [
    

@@ -1,7 +1,5 @@
 async function buscarUsuarios() {
-  const resposta = await fetch(
-    "https://api-usuarios-i4ye.onrender.com/usuarios"
-  );
+  const resposta = await fetch("/usuarios");
 
   const usuarios = await resposta.json();
 

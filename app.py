@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, send_from_directory
 from flask_cors import CORS
+import requests
 
 app = Flask(__name__)
 
@@ -11,7 +12,8 @@ def inicio():
 
 @app.route('/usuarios', methods=['GET'])
 def listar_usuarios():
-    return jsonify(usuarios)
+    resposta = requests.get("https://api-usuarios-i4ye.onrender.com/usuarios")
+    return jsonify(resposta.json())
 
 @app.route("/<path:filename>")
 def static_files(filename):
